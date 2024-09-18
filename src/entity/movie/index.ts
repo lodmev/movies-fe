@@ -1,2 +1,2 @@
-export { MovieCard } from './ui/MovieCard'
+export { MovieCard, MoviesFilteredList } from './ui'
 export * as movieApi from './api'

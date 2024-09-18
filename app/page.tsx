@@ -1,1 +1,1 @@
-export { MoviesList as default } from '@/pages'
+export { Movies as default } from '@/pages'

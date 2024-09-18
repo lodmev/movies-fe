@@ -1,10 +1,10 @@
+import '../styles'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import '../styles'
+import { queryClient } from '@/shared/api'
 import { cn } from '@/shared/lib/utils'
 import { QueryProvider } from '../providers/query-provider'
-import { queryClient } from '@/shared/api'
 
 const inter = Inter({ subsets: ['latin'] })
 

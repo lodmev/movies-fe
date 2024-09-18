@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { AspectRatio } from '@/shared/ui/aspect-ratio'
 import {
   Card,
@@ -6,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/shared/ui/card'
-import Image from 'next/image'
 import { Movie } from '../model'
 
 type Props = Omit<Movie, 'id'>
