@@ -3,9 +3,9 @@ import { useDebounce } from 'use-debounce'
 import { Input } from '@/shared/ui/input'
 import { Label } from '@/shared/ui/label'
 type Props = {
-  FilterList: FC<{ searchString: string }>
+  FilteredComponent: FC<{ searchString: string }>
 }
-export function FilteredMovies({ FilterList }: Props) {
+export function FilteredMovies({ FilteredComponent }: Props) {
   const [searchText, setSearchText] = useState('')
   const [debounce] = useDebounce(searchText, 500)
 
@@ -24,7 +24,7 @@ export function FilteredMovies({ FilterList }: Props) {
           />
         </div>
       </div>
-      <FilterList searchString={debounce} />
+      <FilteredComponent searchString={debounce} />
     </div>
   )
 }

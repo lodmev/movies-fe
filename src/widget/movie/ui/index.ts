@@ -1,0 +1,1 @@
+export { MoviesFilteredList } from './MoviesList'

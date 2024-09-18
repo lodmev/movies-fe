@@ -1,16 +1,16 @@
 import { useQuery } from '@tanstack/react-query'
-import { movieApi } from '..'
-import { MovieCard } from './MovieCard'
+import { movieApi } from '../../../entity/movie'
+import { MovieCard } from '../../../entity/movie/ui/MovieCard'
 
 type Props = {
   searchString: string
 }
 
 export function MoviesFilteredList({ searchString }: Props) {
-  const { data, error, isError, isFetching } = useQuery(
+  const { data, error, isError, isLoading } = useQuery(
     movieApi.moviesQueries.filter(searchString)
   )
-  if (isFetching) {
+  if (isLoading) {
     return <div>Loading...</div>
   }
   if (isError) {

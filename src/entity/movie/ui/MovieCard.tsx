@@ -10,6 +10,7 @@ import {
 import { Movie } from '../model'
 
 type Props = Omit<Movie, 'id'>
+
 export function MovieCard({ name, description, posterUrl }: Props) {
   return (
     <Card className="min-w-7">
