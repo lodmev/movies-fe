@@ -1,1 +1,0 @@
-export { FilteredMovies } from './ui'

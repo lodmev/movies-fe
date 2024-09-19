@@ -1,1 +1,1 @@
-export { FilteredMovies } from './filter-movie'
+export { FilteredMovies } from './filter'
