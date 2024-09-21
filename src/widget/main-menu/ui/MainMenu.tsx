@@ -1,4 +1,4 @@
-import { HomeIcon } from "@radix-ui/react-icons";
+import { EnterIcon, HomeIcon } from "@radix-ui/react-icons";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -21,7 +21,11 @@ export function MainMenu({ adminMenu }: Props) {
           title="Home"
           icon={<HomeIcon className="scale-125 stroke-2" />}
         />
-        <MenuItem href="/login" title="Log-in" />
+        <MenuItem
+          href="/login"
+          title="Log-in"
+          icon={<EnterIcon className="scale-125 stroke-2" />}
+        />
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             <span className="font-bold">Profile</span>

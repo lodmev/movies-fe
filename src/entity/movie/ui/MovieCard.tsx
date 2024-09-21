@@ -1,17 +1,23 @@
-import Image from 'next/image'
-import { AspectRatio } from '@/shared/ui/aspect-ratio'
+import Image from "next/image";
+import { AspectRatio } from "@/shared/ui/aspect-ratio";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-} from '@/shared/ui/card'
-import { Movie } from '../model'
+} from "@/shared/ui/card";
+import { Movie } from "../model";
+import { ReactNode } from "react";
 
-type Props = Omit<Movie, 'id'>
+type WithActions = {
+  actions?: ReactNode;
+};
 
-export function MovieCard({ name, description, posterUrl }: Props) {
+type Props = Omit<Movie, "id"> & WithActions;
+
+export function MovieCard({ name, description, posterUrl, actions }: Props) {
   return (
     <Card className="min-w-7">
       <CardHeader>
@@ -29,7 +35,10 @@ export function MovieCard({ name, description, posterUrl }: Props) {
             className="rounded-md"
           />
         </AspectRatio>
+        <div className="flex justify-end mt-2 mr-2">
+          <div className="space-x-2">{actions}</div>
+        </div>
       </CardContent>
     </Card>
-  )
+  );
 }
