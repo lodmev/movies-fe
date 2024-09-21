@@ -1,5 +1,4 @@
 import { API_URL } from "@/shared/config";
-import { error } from "console";
 
 export class ApiClient {
   private baseUrl: string;
@@ -68,6 +67,30 @@ export class ApiClient {
       headers,
       body: JSON.stringify(body),
       mode: "cors",
+    });
+
+    return this.handleResponse<TResult>(response);
+  }
+  public async delete<TResult = unknown>(
+    endpoint: string,
+    queryParams?: Record<string, string | number>,
+    token?: string | null
+  ): Promise<TResult> {
+    const url = new URL(endpoint, this.baseUrl);
+    const headers: Record<string, string> = {
+      "Content-Type": "application/json",
+    };
+    if (queryParams) {
+      Object.entries(queryParams).forEach(([key, value]) => {
+        url.searchParams.append(key, value.toString());
+      });
+    }
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+    const response = await fetch(url.toString(), {
+      method: "DELETE",
+      headers,
     });
 
     return this.handleResponse<TResult>(response);

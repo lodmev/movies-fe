@@ -1,6 +1,6 @@
-import styles from "./styles.module.css";
-import { Spinner } from "./Spinner";
 import { cn } from "@/shared/lib/utils";
+import { Spinner } from "./Spinner";
+import styles from "./styles.module.css";
 
 type Props = {
   isOpen: boolean;

@@ -1,4 +1,7 @@
 export type Role = "ADMIN" | "USER";
+export type FavoriteMovie = {
+  movieId: string;
+};
 export type User = {
   id: string;
   name: string;
@@ -6,9 +9,7 @@ export type User = {
   registeredAt: Date;
   updatedAt: Date;
   roles: Role[];
-  favoriteMovies: {
-    movieId: string;
-  }[];
+  favoriteMovies: FavoriteMovie[];
   token?: string;
 };
 export type LoginDTO = {

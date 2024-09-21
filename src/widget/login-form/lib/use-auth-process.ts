@@ -1,9 +1,9 @@
-import { LoginDTO, User } from "@/entity/user";
-import { useAuthUser } from "@/feature/user";
-import { useToast } from "@/shared/lib/hooks/use-toast";
 import { UseMutateFunction } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { LoginDTO, User } from "@/entity/";
+import { useAuthUser } from "@/feature";
+import { useToast } from "@/shared/lib/";
 
 export const useAuthProcess = (): [
   mutate: UseMutateFunction<User, Error, LoginDTO, unknown>,
@@ -24,6 +24,6 @@ export const useAuthProcess = (): [
         description: error.message,
       });
     }
-  }, [error]);
+  }, [error, toast]);
   return [mutate, isPending];
 };

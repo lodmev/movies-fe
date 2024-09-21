@@ -1,7 +1,6 @@
 "use client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { LoginDTO } from "@/entity/user";
-import { userApi } from "@/entity/user";
+import { userApi } from "@/entity/";
 
 export const useAuthUser = () => {
   const queryClient = useQueryClient();

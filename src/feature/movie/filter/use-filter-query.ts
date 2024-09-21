@@ -1,8 +1,8 @@
-import { movieApi } from "@/entity/movie";
-import { useToast } from "@/shared/lib/hooks/use-toast";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useDebounce } from "use-debounce";
+import { movieApi } from "@/entity/";
+import { useToast } from "@/shared/lib/";
 
 type Props = {
   name: string;

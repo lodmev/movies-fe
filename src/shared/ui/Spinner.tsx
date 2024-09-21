@@ -1,6 +1,5 @@
 import { cn } from "@/shared/lib/utils";
 import styles from "./styles.module.css";
-type Props = {};
 export function Spinner() {
   return (
     <div

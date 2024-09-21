@@ -1,5 +1,4 @@
 "use client";
-import { useAuthUser } from "@/feature/user";
 import { Button } from "@/shared/ui/button";
 import {
   Card,
@@ -11,9 +10,8 @@ import {
 } from "@/shared/ui/card";
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";
-import { formHandler } from "../lib/formHandler";
-import { ModalSpinner } from "@/shared/ui/spinner/ModalSpinner";
-import { useAuthProcess } from "../lib/use-auth-process";
+import { ModalSpinner } from "@/shared/ui/ModalSpinner";
+import { formHandler, useAuthProcess } from "../lib";
 
 export function LoginForm() {
   const [setUserAuth, isPending] = useAuthProcess();
