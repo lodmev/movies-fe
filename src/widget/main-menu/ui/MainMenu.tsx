@@ -8,33 +8,23 @@ import {
 import Link from "next/link";
 import { ReactNode } from "react";
 import { navigationMenuTriggerStyle } from "@/shared/ui/navigation-menu";
+import { MenuItem } from "./MenuItem";
 type Props = {
   adminMenu?: ReactNode;
 };
 export function MainMenu({ adminMenu }: Props) {
   return (
-    <NavigationMenu className=" fixed bottom-0 sm:top-0 z-50 h-11 w-full">
-      <NavigationMenuList className="bg-sky-400 rounded flex justify-center">
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <div className="flex gap-1 justify-center items-center">
-              <HomeIcon className="scale-125" />
-              <span>Home</span>
-              </div>
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/login" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Log-in
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+    <NavigationMenu className=" fixed bottom-0 sm:top-0 z-50 sm:h-9 w-screen">
+      <NavigationMenuList className="bg-sky-400 flex justify-center">
+        <MenuItem
+          href="/"
+          title="Home"
+          icon={<HomeIcon className="scale-125 stroke-2" />}
+        />
+        <MenuItem href="/login" title="Log-in" />
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Profile
+            <span className="font-bold">Profile</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
         {adminMenu}

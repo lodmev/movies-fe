@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={cn("p-1 w-full h-full sm:mt-11", inter.className)}>
+      <body className={cn("sm:mt-9", inter.className)}>
         <QueryProvider client={queryClient}>
           <MainMenu />
           {children}
