@@ -1,4 +1,4 @@
-import { User } from "@/entity/user";
+import { User } from "@/entity";
 
 export const isInFavorite = (
   user: User | undefined,
