@@ -14,12 +14,14 @@ type Props = {
 export function MainMenu({ adminMenu }: Props) {
   return (
     <NavigationMenu className=" fixed bottom-0 sm:top-0 z-50 h-11 w-full">
-      <NavigationMenuList className="bg-accent rounded flex justify-center">
+      <NavigationMenuList className="bg-sky-400 rounded flex justify-center">
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <div className="flex gap-1 justify-center items-center">
+              <HomeIcon className="scale-125" />
               <span>Home</span>
-              <HomeIcon scale={2.1} className="stroke-red-600" />
+              </div>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

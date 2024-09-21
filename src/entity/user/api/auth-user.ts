@@ -1,6 +1,19 @@
 import { apiClient } from "@/shared/api";
-import { LoginDTO } from "../model";
+import { AuthResponse, LoginDTO } from "../model";
+import { saveToken } from "../lib/utils";
+import { getUser } from "./get-user-by-token";
 
-export const authUser = ({ email, password }: LoginDTO) => {
-  return apiClient.post("/auth", { email, password });
+export const authUser = async ({ email, password }: LoginDTO) => {
+  let tokenResponse: AuthResponse;
+  try {
+    tokenResponse = await apiClient.post<AuthResponse>("/auth/login", {
+      email,
+      password,
+    });
+    saveToken(tokenResponse.accessToken);
+    return getUser();
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
 };

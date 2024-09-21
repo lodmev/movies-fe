@@ -6,6 +6,7 @@ import { MainMenu } from "@/widget";
 import { queryClient } from "@/shared/api";
 import { cn } from "@/shared/lib/utils";
 import { QueryProvider } from "../providers/query-provider";
+import { Toaster } from "@/shared/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
           <MainMenu />
           {children}
         </QueryProvider>
+        <Toaster />
       </body>
     </html>
   );

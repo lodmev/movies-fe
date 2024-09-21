@@ -1,1 +1,2 @@
-export { Movies } from './Movies'
+export * from "./Movies";
+export * from "./Login";

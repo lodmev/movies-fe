@@ -1,0 +1,14 @@
+.overlay {
+  display: none;
+  background-color: hsla(219, 11%, 65%, 0.726);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  &.showed {
+    display: flex;
+  }
+}
+.spinner {
+  border-top-color: currentColor;
+  aspect-ratio: 1;
+}

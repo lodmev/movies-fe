@@ -1,16 +1,16 @@
-'use client'
-import { useFilterQuery } from '@/feature/movie/filter/hook/use-filter-query'
-import { useState } from 'react'
-import { MovieCard } from '@/entity/movie'
-import { FilterInput } from '@/feature/movie/filter'
-import { LoadingSkeleton } from '@/shared/ui/LoadingSkeleton'
-import { IsVisible } from '@/shared/ui/IsVisible'
+"use client";
+import { useFilterQuery } from "@/feature/movie/";
+import { useState } from "react";
+import { MovieCard } from "@/entity/movie";
+import { FilterInput } from "@/feature/movie/filter";
+import { LoadingSkeleton } from "@/shared/ui/LoadingSkeleton";
+import { IsVisible } from "@/shared/ui/IsVisible";
 
 export function Movies() {
-  const [searchText, setSearchText] = useState('')
+  const [searchText, setSearchText] = useState("");
   const { data, error, isSuccess } = useFilterQuery({
     name: searchText,
-  })
+  });
   return (
     <div className="flex flex-col max-w-4xl gap-2 m-auto">
       <FilterInput inputControls={[searchText, setSearchText]} />
@@ -28,5 +28,5 @@ export function Movies() {
         ))}
       {error && <pre className="text-red-600">{error.message}</pre>}
     </div>
-  )
+  );
 }

@@ -4,7 +4,7 @@ import { getUser } from "./get-user-by-token";
 export const userQueries = {
   current: () =>
     queryOptions({
-      queryKey: ["current"],
+      queryKey: ["user"],
       queryFn: getUser,
       staleTime: Infinity,
     }),
