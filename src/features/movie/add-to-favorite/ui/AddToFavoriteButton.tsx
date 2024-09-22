@@ -1,7 +1,7 @@
 "use client";
 import { HeartFilledIcon } from "@radix-ui/react-icons";
 import { useQuery } from "@tanstack/react-query";
-import { userApi } from "@/entity";
+import { userApi } from "@/entities";
 import { cn } from "@/shared/lib/utils";
 import { Spinner } from "@/shared/ui/Spinner";
 import { useToggleFavorite } from "../api/";

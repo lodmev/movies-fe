@@ -1,4 +1,4 @@
-import { LoginForm } from "@/widget/login-form";
+import { LoginForm } from "@/widgets/login-form";
 
 export const description =
   "A simple login form with email and password. The submit button says 'Sign in'.";

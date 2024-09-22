@@ -2,7 +2,7 @@ import "../styles";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { MainMenu } from "@/widget";
+import { MainMenu } from "@/widgets";
 import { queryClient } from "@/shared/api";
 import { cn } from "@/shared/lib/utils";
 import { Toaster } from "@/shared/ui/toaster";

@@ -1,7 +1,7 @@
 "use client";
 import { TrashIcon } from "@radix-ui/react-icons";
 import { useQuery } from "@tanstack/react-query";
-import { Movie, userApi } from "@/entity";
+import { Movie, userApi } from "@/entities";
 import { useErrorToast } from "@/shared/lib";
 import { cn } from "@/shared/lib/utils";
 import {

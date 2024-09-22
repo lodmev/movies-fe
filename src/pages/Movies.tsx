@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { MovieCard } from "@/entity";
-import { RemoveButton as RemoveMovieButton } from "@/feature/";
-import { useFilterQuery } from "@/feature/";
-import { AddToFavoriteButton } from "@/feature/";
-import { FilterInput } from "@/feature/";
+import { MovieCard } from "@/entities";
+import { RemoveButton as RemoveMovieButton } from "@/features";
+import { useFilterQuery } from "@/features";
+import { AddToFavoriteButton } from "@/features";
+import { FilterInput } from "@/features";
 
 export function Movies() {
   const [searchText, setSearchText] = useState("");

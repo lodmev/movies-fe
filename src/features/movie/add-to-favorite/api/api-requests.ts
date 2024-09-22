@@ -1,4 +1,4 @@
-import { FavoriteMovie, getUserToken } from "@/entity";
+import { FavoriteMovie, getUserToken } from "@/entities";
 import { apiClient } from "@/shared/api";
 
 export const addToFavorite = (movieId: string) => {

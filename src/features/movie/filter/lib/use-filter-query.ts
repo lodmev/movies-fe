@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useDebounce } from "use-debounce";
-import { movieApi } from "@/entity/";
+import { movieApi } from "@/entities";
 import { useErrorToast } from "@/shared/lib/";
 
 type Props = {

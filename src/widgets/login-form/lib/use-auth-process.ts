@@ -1,7 +1,7 @@
 import { UseMutateFunction } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
-import { LoginDTO, User } from "@/entity/";
-import { useAuthUser } from "@/feature";
+import { LoginDTO, User } from "@/entities";
+import { useAuthUser } from "@/features";
 import { useErrorToast } from "@/shared/lib/";
 
 export const useAuthProcess = (): [

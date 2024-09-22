@@ -1,5 +1,5 @@
-import { getUserToken } from "@/entity";
-import { Movie } from "@/entity/";
+import { getUserToken } from "@/entities";
+import { Movie } from "@/entities";
 import { apiClient } from "@/shared/api";
 
 export const remove = (movieId: string) => {
