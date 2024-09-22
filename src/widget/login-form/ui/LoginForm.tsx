@@ -19,7 +19,7 @@ export function LoginForm() {
   return (
     <>
       <ModalSpinner isOpen={isPending} />
-      <form onSubmit={formHandler(setUserAuth)}>
+      <form onSubmit={formHandler(setUserAuth)} className="p-2">
         <Card className="w-full max-w-sm m-auto">
           <CardHeader>
             <CardTitle className="text-2xl">Login</CardTitle>

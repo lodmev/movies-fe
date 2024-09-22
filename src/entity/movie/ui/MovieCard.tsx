@@ -1,15 +1,14 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 import { AspectRatio } from "@/shared/ui/aspect-ratio";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/shared/ui/card";
 import { Movie } from "../model";
-import { ReactNode } from "react";
 
 type WithActions = {
   actions?: ReactNode;
@@ -36,7 +35,7 @@ export function MovieCard({ name, description, posterUrl, actions }: Props) {
           />
         </AspectRatio>
         <div className="flex justify-end mt-2 mr-2">
-          <div className="space-x-2">{actions}</div>
+          <div className="flex space-x-4">{actions}</div>
         </div>
       </CardContent>
     </Card>
