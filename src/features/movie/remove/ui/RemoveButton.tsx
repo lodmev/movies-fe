@@ -17,16 +17,15 @@ import {
 } from "@/shared/ui/alert-dialog";
 import { Spinner } from "@/shared/ui/Spinner";
 import { useRemove } from "../api";
-import { hasRights } from "../lib";
+import { useUserHasRights } from "@/entities";
 type Props = {
   movie: Movie;
 };
 export function RemoveButton({ movie }: Props) {
-  const { data: user } = useQuery(userApi.userQueries.current());
   const { mutate: deleteMovie, isPending, error } = useRemove();
   useErrorToast(error);
-  const userHasRights = hasRights(user);
-  if (!userHasRights) {
+  const userHasAdminRights = useUserHasRights("ADMIN");
+  if (!userHasAdminRights) {
     return null;
   }
   const classes = cn("scale-150");

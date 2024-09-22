@@ -9,6 +9,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { navigationMenuTriggerStyle } from "@/shared/ui/navigation-menu";
 import { MenuItem } from "./MenuItem";
+import { AdminMenu } from "./AdminMenu";
 type Props = {
   adminMenu?: ReactNode;
 };
@@ -31,7 +32,7 @@ export function MainMenu({ adminMenu }: Props) {
             <span className="font-bold">Profile</span>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        {adminMenu}
+        {<AdminMenu />}
       </NavigationMenuList>
     </NavigationMenu>
   );
