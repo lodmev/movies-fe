@@ -5,7 +5,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { Dispatch, SetStateAction, useState } from "react";
-import { FavoriteMovie, User } from "@/entity";
+import { FavoriteMovie, User } from "@/entities";
 import { addToFavorite, removeFromFavorite } from "./api-requests";
 
 export const useToggleFavorite = (): [

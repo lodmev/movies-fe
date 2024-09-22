@@ -1,1 +1,1 @@
-export { type Movie } from "./types";
+export { type Movie, type MovieDTO } from "./types";
