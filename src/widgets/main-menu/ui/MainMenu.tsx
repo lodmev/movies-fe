@@ -1,12 +1,12 @@
 "use client";
 import { EnterIcon, HomeIcon } from "@radix-ui/react-icons";
+import { useUserHasRights } from "@/entities";
 import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/shared/ui/navigation-menu";
 import { AdminMenu } from "./AdminMenu";
 import { MenuItem } from "./MenuItem";
-import { useUserHasRights } from "@/entities";
 
 export function MainMenu() {
   const userHasAdminRights = useUserHasRights("ADMIN");

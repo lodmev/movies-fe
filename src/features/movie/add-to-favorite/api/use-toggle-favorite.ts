@@ -19,6 +19,9 @@ export const useToggleFavorite = (): [
     mutationFn,
     onSuccess: (data) => {
       queryClient.setQueryData(["user"], (user: User) => {
+        if (!Array.isArray(user.favoriteMovies)) {
+          user.favoriteMovies = [];
+        }
         if (!inFavorite) {
           user.favoriteMovies.push({ movieId: data.movieId });
         } else {

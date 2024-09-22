@@ -1,2 +1,3 @@
-export { useAuthProcess } from "../api";
-export { formHandler } from "./form-handler";
+export { formHandler } from "./login-form-handler";
+export { registrationFormHandler } from "./registration-form-handler";
+export { useRole } from "./use-role";

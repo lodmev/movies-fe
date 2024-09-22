@@ -1,6 +1,6 @@
 import { UseMutateFunction } from "@tanstack/react-query";
 import { FormEvent } from "react";
-import { LoginDTO, User } from "@/entity/";
+import { LoginDTO, User } from "@/entities";
 
 export const formHandler =
   (mutateFn: UseMutateFunction<User, Error, LoginDTO, unknown>) =>

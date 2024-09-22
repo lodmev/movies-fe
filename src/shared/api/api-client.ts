@@ -1,4 +1,4 @@
-import { API_URL } from "@/shared/config";
+import { API_URL, TOKEN_KEY } from "@/shared/config";
 
 export class ApiClient {
   private baseUrl: string;
@@ -25,7 +25,12 @@ export class ApiClient {
       throw new Error("Error parsing JSON response");
     }
   }
-
+  isBadToken(response: Response, token?: string | null) {
+    if (response.status === 401 && token) {
+      localStorage.removeItem(TOKEN_KEY);
+      throw new Error("Bad token");
+    }
+  }
   public async get<TResult = unknown>(
     endpoint: string,
     queryParams?: Record<string, string | number>,
@@ -47,7 +52,7 @@ export class ApiClient {
       method: "GET",
       headers,
     });
-
+    this.isBadToken(response, token);
     return this.handleResponse<TResult>(response);
   }
 
@@ -68,7 +73,7 @@ export class ApiClient {
       body: JSON.stringify(body),
       mode: "cors",
     });
-
+    this.isBadToken(response, token);
     return this.handleResponse<TResult>(response);
   }
   public async delete<TResult = unknown>(
@@ -92,7 +97,7 @@ export class ApiClient {
       method: "DELETE",
       headers,
     });
-
+    this.isBadToken(response, token);
     return this.handleResponse<TResult>(response);
   }
 }

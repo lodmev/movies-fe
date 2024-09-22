@@ -1,13 +1,12 @@
+import { TOKEN_KEY } from "@/shared/config";
 import { Role, User } from "../model";
 
-const KEY = "token";
-
 export const saveToken = (token: string) => {
-  localStorage.setItem(KEY, token);
+  localStorage.setItem(TOKEN_KEY, token);
 };
 
 export const getToken = (): string => {
-  const token = localStorage.getItem(KEY);
+  const token = localStorage.getItem(TOKEN_KEY);
   if (!token) {
     throw new Error("No saved token");
   }

@@ -16,6 +16,10 @@ export type LoginDTO = {
   email: string;
   password: string;
 };
+export type RegisterDTO = LoginDTO & {
+  name: string;
+  roles?: Role[];
+};
 export type AuthResponse = {
   accessToken: string;
 };
