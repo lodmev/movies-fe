@@ -12,7 +12,7 @@ export function ModalSpinner({ isOpen }: Props) {
         [styles["showed"]]: isOpen,
       })}
     >
-      <div className="text-muted-foreground w-1/2 sm:w-1/5 m-auto ">
+      <div className="text-muted-foreground w-1/2 sm:w-1/6 m-auto ">
         <Spinner />
       </div>
     </div>

@@ -1,11 +1,10 @@
-import { navigationMenuTriggerStyle } from "@/shared/ui/navigation-menu";
-import { HomeIcon } from "@radix-ui/react-icons";
 import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { navigationMenuTriggerStyle } from "@/shared/ui/navigation-menu";
 
 type Props = {
   href: string;
