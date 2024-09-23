@@ -2,7 +2,7 @@
 import { useRegisterUser } from "@/features";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Label } from "@/shared/ui/label";
-import { registrationFormHandler, useRole } from "../lib/";
+import { registrationFormHandler, useRole } from "../lib";
 import { AuthForm } from "./AuthForm";
 
 export function RegistrationForm() {

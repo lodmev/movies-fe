@@ -1,6 +1,6 @@
 "use client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Movie } from "@/entity";
+import { Movie } from "@/entities";
 import { remove } from "./api-requests";
 
 export const useRemove = () => {

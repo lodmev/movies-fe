@@ -1,7 +1,7 @@
 "use client";
 import { TrashIcon } from "@radix-ui/react-icons";
-import { useQuery } from "@tanstack/react-query";
-import { Movie, userApi } from "@/entities";
+import { Movie } from "@/entities";
+import { useUserHasRights } from "@/entities";
 import { useErrorToast } from "@/shared/lib";
 import { cn } from "@/shared/lib/utils";
 import {
@@ -17,7 +17,6 @@ import {
 } from "@/shared/ui/alert-dialog";
 import { Spinner } from "@/shared/ui/Spinner";
 import { useRemove } from "../api";
-import { useUserHasRights } from "@/entities";
 type Props = {
   movie: Movie;
 };

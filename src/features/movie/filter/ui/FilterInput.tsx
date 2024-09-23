@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";
 type Props = {
