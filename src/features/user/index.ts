@@ -1,1 +1,2 @@
-export * from "./auth-user/";
+export * from "./authorize";
+export { LoginForm, RegistrationForm } from "./authorize";

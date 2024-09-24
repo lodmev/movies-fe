@@ -1,3 +1,2 @@
-export { MainMenu } from "./main-menu";
+export { MainMenu } from "../app/layouts/main-menu";
 export { AddMovieForm } from "./add-movie-form";
-export { LoginForm, RegistrationForm } from "./auth-forms";

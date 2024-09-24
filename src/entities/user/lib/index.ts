@@ -1,2 +1,2 @@
-export { getToken, saveToken } from "./utils";
+export { getToken, saveToken, removeToken } from "./utils";
 export * from "./hooks";

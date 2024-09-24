@@ -1,5 +1,5 @@
 "use client";
-import { RegistrationForm } from "@/widgets";
+import { RegistrationForm } from "@/features";
 
 export function Registration() {
   return <RegistrationForm />;

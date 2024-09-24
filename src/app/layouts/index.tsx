@@ -2,11 +2,11 @@ import "../styles";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { MainMenu } from "@/widgets";
 import { queryClient } from "@/shared/api";
 import { cn } from "@/shared/lib/utils";
 import { Toaster } from "@/shared/ui/toaster";
 import { QueryProvider } from "../providers/query-provider";
+import { MainMenu } from "./main-menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn("mb-11 sm:mb-3 sm:mt-11", inter.className)}>
         <QueryProvider client={queryClient}>
           <MainMenu />

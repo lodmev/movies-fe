@@ -12,7 +12,9 @@ export const getToken = (): string => {
   }
   return token;
 };
-
+export const removeToken = () => {
+  localStorage.removeItem(TOKEN_KEY);
+};
 export const hasRights = (
   user: User | undefined,
   requiredRole: Role
